@@ -1,0 +1,95 @@
+﻿<Window x:Class="Kursovay.EquipmentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kursovay"
+        mc:Ignorable="d"
+        Title="Оборудования" Height="290.4" Width="733" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Height" Value="34"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="175*"/>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid AutoGenerateColumns="False" x:Name="EquipmentBD" Margin="226,0,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Id}" Header="Id" Width="50" />
+                <DataGridTextColumn Binding="{Binding Name}" Header="Наименование" Width="125"/>
+                <DataGridTextColumn Binding="{Binding IdTypeName}" Header="Тип" Width="125"/>
+                <DataGridTextColumn Binding="{Binding Quantity}" Header="Количество"  Width="80"/>
+                <DataGridTextColumn Binding="{Binding IdStorage}" Header="Склад"  Width="80"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TabControl HorizontalAlignment="Left" Height="195" VerticalAlignment="Top" Width="226">
+            <TabItem Header="Добавление">
+                <Grid Background="#FFE5E5E5" Margin="0,-2,-2,-2">
+                    <Button x:Name="addButton" Content="Добавить" Click="Add_Click" Margin="93,120,9,27"  Height="22" Width="120"/>
+                    <TextBox Name="txtNameAdd" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" 
+                 VerticalAlignment="Top" Width="120" Margin="93,8,0,0"/>
+                    <Label x:Name="label1" Content="Наименование" HorizontalAlignment="Left" Margin="0,7,0,0"
+                        VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtTypeAdd" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text=""
+                        VerticalAlignment="Top" Width="120" Margin="93,36,0,0"/>
+                    <Label x:Name="label2" Content="Тип" HorizontalAlignment="Left" Margin="61,34,0,0"
+                        VerticalAlignment="Top" Height="25" Width="32"/>
+                    <TextBox x:Name="txtQuantityAdd" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" 
+                        VerticalAlignment="Top" Width="120" Margin="93,64,0,0"/>
+                    <Label x:Name="label1_Copy" Content="Количество" HorizontalAlignment="Left" Margin="19,62,0,0"
+                        VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtStorageAdd" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" 
+                        VerticalAlignment="Top" Width="120" Margin="93,92,0,0"/>
+                    <Label x:Name="label1_Copy1" Content="Склад" HorizontalAlignment="Left" Margin="51,88,0,0"
+                        VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Изменение">
+                <Grid Background="#FFE5E5E5" Margin="0,-1,0,-2">
+                    <TextBox x:Name="txtNameChange" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" 
+                        VerticalAlignment="Top" Width="120" Margin="94,33,0,0"/>
+                    <Label x:Name="label1_Copy2" Content="Наименование" HorizontalAlignment="Left" Margin="1,32,0,0"
+                        VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtTypeChange" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text=""
+                        VerticalAlignment="Top" Width="120" Margin="94,61,0,0"/>
+                    <Label x:Name="label2_Copy" Content="Тип" HorizontalAlignment="Left" Margin="62,59,0,0"
+                        VerticalAlignment="Top" Height="25" Width="32"/>
+                    <TextBox x:Name="txtQuantityChange" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" 
+                        VerticalAlignment="Top" Width="120" Margin="94,89,0,0"/>
+                    <Label x:Name="label1_Copy3" Content="Количество" HorizontalAlignment="Left" Margin="20,87,0,0"
+                        VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtStorageChange" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" 
+                        VerticalAlignment="Top" Width="120" Margin="94,117,0,0"/>
+                    <Label x:Name="label1_Copy4" Content="Склад" HorizontalAlignment="Left" Margin="52,113,0,0"
+                        VerticalAlignment="Top"/>
+                    <TextBox x:Name ="txtIdСhange" HorizontalAlignment="Left" Height="23" Margin="94,5,0,0"
+                        TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <Label x:Name="label" Content="ID" HorizontalAlignment="Left" Margin="72,0,0,143"
+                        VerticalAlignment="Bottom" Height="23"/>
+                    <Button x:Name="ChageButton" Content="Изменить" Click="Change_Click" Margin="94,144,6,2" Width="120" Height="22"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Удаление">
+                <Grid Background="#FFE5E5E5" Margin="0,-1,0,-2">
+                    <TextBox x:Name ="txtIdDelete" HorizontalAlignment="Left" Height="23" Margin="94,5,0,0"
+                        TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <Label x:Name="label_Copy" Content="ID" HorizontalAlignment="Left" Margin="72,0,0,141"
+                        VerticalAlignment="Bottom" Height="25"/>
+                    <Button x:Name="deleteButton" Content="Удалить" Click="deleteButton_Click" Margin="94,33,6,113" Width="120" Height="22"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Button Content="Назад" HorizontalAlignment="Left" Height="30" Margin="4,221,0,0"
+            VerticalAlignment="Top" Width="85" Click="Back"/>
+
+
+
+    </Grid>
+</Window>

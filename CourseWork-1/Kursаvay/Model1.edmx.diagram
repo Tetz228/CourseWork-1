@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c8a6e4c09f6342e4a4c2f4a5df6d64cf" Name="Diagram1">
+        <EntityTypeShape EntityType="gr683_zkaModel.Equipment" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="gr683_zkaModel.Extradition" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="gr683_zkaModel.Personnel" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="gr683_zkaModel.Storages" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="gr683_zkaModel.TypeEquipment" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="gr683_zkaModel.Users" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <AssociationConnector Association="gr683_zkaModel.FK__Equipment__IdSto__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="gr683_zkaModel.FK__Equipment__IdTyp__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="gr683_zkaModel.FK__Extraditi__IdEqu__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="gr683_zkaModel.FK__Extraditi__IdPer__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="gr683_zkaModel.FK__Extraditi__IdUse__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="gr683_zkaModel.FK_Extradition_IdStorages" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

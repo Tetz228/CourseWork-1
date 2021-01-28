@@ -1,0 +1,29 @@
+﻿<Window x:Class="Kursovay.AuthrizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kursovay"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="231.697" Width="267.171" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="ToolWindow">
+
+    <Grid Background="#FF191919" Margin="0,0,0,-3">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="61*"/>
+            <RowDefinition Height="45*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="49*" />
+            <ColumnDefinition Width="212*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text ="Логин" Grid.Row="0" Margin="11,4,176,29" FontSize="16" Foreground="#FFB9B5B5" Grid.ColumnSpan="2"/>
+        <TextBox Name = "login" Grid.Row="0" Height="28" Margin="10,38,10,13" VerticalAlignment="Center"  BorderBrush="#FF0041FF" Foreground="#FFF9F9F9" Background="#FF292828" FontSize="14" Grid.ColumnSpan="2"/>
+
+        <TextBlock Text = "Пароль" Grid.Row="1" Margin="11,4,176,32" FontSize="16" Foreground="#FFB9B5B5" Grid.ColumnSpan="2" />
+        <PasswordBox Name = "password" Grid.Row="1" Height="29" Margin="10,35,10,10" VerticalAlignment="Center" BorderBrush="#FF0041FF" Background="#FF292828" Foreground="#FFF9F9F9" FontSize="14" Grid.ColumnSpan="2"/>
+
+        <Button HorizontalAlignment="Right" Width="72" Content="Войти" Click="AuthorizationClick" Margin="0,10,10,10" Background="#FF173C3E" BorderBrush="#FF00ACFD" Foreground="#FF13BEF0" Grid.Row="2" Grid.Column="1"/>
+    </Grid>
+</Window>

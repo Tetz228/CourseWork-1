@@ -1,0 +1,40 @@
+﻿<Window x:Class="Kursovay.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kursovay"
+        mc:Ignorable="d"
+        Title="Главное окно" WindowStartupLocation="CenterScreen" Height="277.967" Width="327" ResizeMode="CanMinimize">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Width" Value="148"/>
+            <Setter Property="Height" Value="50"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid  RenderTransformOrigin="0.499,0.502">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="366*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+            <Button x:Name="Extradition" Content="Выдача оборудования" Click="ExtraditionClick" />
+            <Button x:Name="Equipment" Content="Оборудования" Click="EquipmentClick" />
+            <Button x:Name="TypeEquipmentButton" Content="Типы оборудования" Click="TypeEquipmentButton_Click"/>
+            <Button x:Name="Close" Content="Выход" Click="Close_Click"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Right">
+            <Button x:Name="Storages" Content="Склады" Click="StoragesClick"/>
+            <Button x:Name="Personnel" Content="Персонал" Click="PersonnelClick"/>
+            <Button x:Name="Users" Content="Пользователи" Click="UsersClick"/>
+            <Button x:Name="Exit" Content="Выйти с аккаунта" Click="ExitClick"/>
+        </StackPanel>
+    </Grid>
+</Window>
